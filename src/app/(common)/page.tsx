@@ -1,0 +1,26 @@
+import Faq from "@/components/Home/Faq";
+import TestimonialsSwiper from "@/components/Home/GlobalTestimonials";
+import Hero from "@/components/Home/Hero";
+import HeroSection2 from "@/components/Home/Hero2";
+import RecruitmentSteps from "@/components/Home/Recruitement";
+
+import { RecruitmentCard } from "@/components/Home/RecruitmentCard";
+import ServiceSection from "@/components/Home/ServiceSection";
+import Testimonials2 from "@/components/Home/Testimonials2";
+import Vacancies from "@/components/Home/Vacancies";
+
+export default function Home() {
+  return (
+    <div className="mx-auto ">
+      <Hero />
+      <TestimonialsSwiper />
+      <Vacancies />
+      <RecruitmentSteps/>
+      <HeroSection2 />
+      <Testimonials2 />
+      <RecruitmentCard />
+      <Faq />
+      <ServiceSection />
+    </div>
+  );
+}
