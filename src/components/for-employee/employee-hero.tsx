@@ -5,15 +5,15 @@ import bgImage from "@/assets/home/employee-hero.png";
 
 export default function Home2() {
   return (
-    <main>
+    <main className="">
       <HeroSection />
-    </main>
+    </main> 
   );
 }
 
 function HeroSection() {
   return (
-    <section className="flex bg-[#F8F7F7]">
+    <section className="flex bg-[#F8F7F7] p-6 md:p-0">
       <div className="w-full max-w-[1600px] mx-auto grid lg:grid-cols-2 gap-6 items-center justify-center min-h-[60vh]">
         {/* Left Content */}
         <div className="max-w-lg mx-auto lg:mx-0 text-left lg:text-left">

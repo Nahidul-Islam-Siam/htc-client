@@ -24,10 +24,10 @@ const logos = [
 
 export default function TrustedBy() {
   return (
-    <div className="w-full py-8 bg-white grid grid-cols-1">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="w-full py-8 bg-white ">
+      <div className="max-w-7xl mx-auto px-4 sm:py-16 grid grid-cols-1">
         {/* Heading */}
-        <h3 className="text-sm sm:text-base md:text-xl font-bold mb-6 text-center text-gray-800">
+        <h3 className="text-lg  sm:text-base md:text-xl font-bold mb-8 text-center text-gray-800">
           Trusted by industry leaders
         </h3>
 
