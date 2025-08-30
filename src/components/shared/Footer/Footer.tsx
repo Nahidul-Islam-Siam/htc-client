@@ -137,7 +137,7 @@ export default function Footer() {
         {/* Middle Section: Links & Certifications */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Left: Link Columns */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 ">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-6 ">
             {[
               { title: "EMPLOYERS", links: employers },
               { title: "JOB SEEKERS", links: jobSeekers },
@@ -164,7 +164,7 @@ export default function Footer() {
           </div>
 
           {/* Right: Certifications & Partnerships */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
             {/* Certified By */}
             <div>
               <h5 className="text-xs font-semibold tracking-widest text-gray-500 mb-3 uppercase">
