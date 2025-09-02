@@ -2,15 +2,15 @@ import { Grid2X2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import SearchForm from "./Form";
-import hero1 from "@/assets/home/h1.png";
-import hero2 from "@/assets/home/h2.png";
+import hero1 from "@/assets/home/Left - Yellow Helmet.png";
+import hero2 from "@/assets/home/Right - Yellow Helmet.png";
 
 
 export default function Hero() {
   return (
     <div className="bg-[#ffffff]">
       <section className="relative mx-auto    md:mb-20 mb-16">
-        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 md:py-16 py-12 shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border bg-[#ffffff] md:py-16 py-12 shadow-sm">
           {/* Content */}
           <div className="relative z-10 flex flex-col justify-center text-center max-w-7xl mx-auto">
             {/* Badge */}
