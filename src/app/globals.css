@@ -21,14 +21,41 @@
   font-family: "Chakra Petch", sans-serif;
 }
 
+/* Only apply Chakra Petch to text, not emojis */
 body {
-  font-family: "Chakra Petch", sans-serif;
+  font-family: "Chakra Petch", system-ui, -apple-system, sans-serif;
 }
 
+/* ✅ Remove font override on pseudo-elements */
+/* ❌ Remove this block entirely: */
+/*
 *,
 *::before,
 *::after {
   font-family: "Chakra Petch", sans-serif !important;
+}
+*/
+
+/* Instead, apply font only where needed */
+.text-chakra,
+p,
+span,
+div,
+h1, h2, h3, h4, h5, h6,
+button,
+input,
+textarea,
+select {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+/* Allow emoji to use system emoji font */
+.emoji, 
+.flag, 
+span.flag, 
+img + span {
+  font-family: system-ui, -apple-system, sans-serif;
+  /* Let OS handle emoji */
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -143,7 +170,6 @@ input[type="number"] {
   .container {
     padding-left: 100px;
     padding-right: 100px;
-    /* Or use max-width + auto margin for centering */
   }
 }
 
