@@ -23,7 +23,7 @@ const steps: Step[] = [
       "Apply for a vacancy or submit an open application. We'll review your profile within minutes.",
     image:
       "/step1.png",
-    iconImage: "/images/upload.png",
+    iconImage: "/images/upload2.png",
   },
   {
     title: "Pre-screening within 5 minutes",
@@ -138,7 +138,7 @@ export default function RecruitmentSteps() {
                   >
                     <div className="flex items-start gap-4">
                       <div
-                        className={`flex h-9 w-9 items-center justify-center rounded-md border-2 flex-shrink-0 ${
+                        className={`flex h-9 w-9 items-center justify-center rounded-md  flex-shrink-0 ${
                           isActive
                             ? "bg-gray-50 border-black"
                             : isCompleted

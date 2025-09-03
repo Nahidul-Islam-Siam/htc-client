@@ -1,3 +1,4 @@
+import TrustedBy from "@/components/common/about-us/TrustedBy";
 import Faq from "@/components/Home/Faq";
 // import FeaturedTestimonials2 from "@/components/Home/FeaturedTestimonials2";
 import FeaturedTestimonials from "@/components/Home/GlobalTestimonials";
@@ -8,7 +9,7 @@ import RecruitmentSteps from "@/components/Home/Recruitement";
 
 import { RecruitmentCard } from "@/components/Home/RecruitmentCard";
 import ServiceSection from "@/components/Home/ServiceSection";
-import Testimonials2 from "@/components/Home/Testimonials2";
+// import Testimonials2 from "@/components/Home/Testimonials2";
 import Vacancies from "@/components/Home/Vacancies";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
       <Vacancies />
       <RecruitmentSteps/>
       <HeroSection2 />
-      <Testimonials2 />
+         <TrustedBy />
       <RecruitmentCard />
       <Faq />
       <ServiceSection />
