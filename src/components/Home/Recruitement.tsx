@@ -142,7 +142,7 @@ export default function RecruitmentSteps() {
                           isActive
                             ? "bg-gray-50 border-black"
                             : isCompleted
-                            ? "bg-[#facc15] "
+                            ? " "
                             : "bg-white border-gray-300"
                         }`}
                       >
