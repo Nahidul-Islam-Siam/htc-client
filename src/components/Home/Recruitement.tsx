@@ -157,7 +157,7 @@ export default function RecruitmentSteps() {
                       <div>
                         <p
                           className={`text-base font-semibold ${
-                            isActive ? "text-gray-900" : "text-gray-600"
+                            isActive ? "text-gray-900" : "text-[#A9A29D]"
                           }`}
                         >
                           {step.title}

@@ -21,7 +21,7 @@ export default function Home() {
       <Vacancies />
       <RecruitmentSteps/>
       <HeroSection2 />
-         <TrustedBy />
+      <TrustedBy />
       <RecruitmentCard />
       <Faq />
       <ServiceSection />
