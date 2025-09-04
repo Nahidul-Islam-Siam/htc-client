@@ -7,16 +7,42 @@ import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 
-import bannner1 from "@/assets/about-us/banner/Img.png";
-import bannner2 from "@/assets/about-us/banner/Img (1).png";
-import bannner3 from "@/assets/about-us/banner/Img (2).png";
-import bannner4 from "@/assets/about-us/banner/Img (3).png";
-import bannner5 from "@/assets/about-us/banner/image 105.png";
+import bannner1 from "@/assets/about-us/banner/HSM - wind energy project 1.jpeg";
+import bannner2 from "@/assets/about-us/banner/HSM - wind energy project 2 (2).jpeg";
+import bannner3 from "@/assets/about-us/banner/Project site - Alfa 1.jpeg";
+import bannner4 from "@/assets/about-us/banner/Project site - Alfa 2.jpeg";
+import bannner5 from "@/assets/about-us/banner/photo 1.jpeg";
+
+import bannner6 from "@/assets/about-us/banner/photo 2.jpeg";
+import bannner7 from "@/assets/about-us/banner/photo 3.jpeg";
+import bannner8 from "@/assets/about-us/banner/photo 4.jpeg";
+import bannner9 from "@/assets/about-us/banner/photo 5.jpeg";
+import bannner10 from "@/assets/about-us/banner/photo 6.jpeg";
+import bannner11 from "@/assets/about-us/banner/photo 7.jpeg";
+import bannner12 from "@/assets/about-us/banner/photo 8.jpeg";
+import bannner13 from "@/assets/about-us/banner/photo 9.jpeg";
+
+import bannner14 from "@/assets/about-us/banner/photo 10.jpeg";
+import bannner15 from "@/assets/about-us/banner/photo 11.jpeg";
+import bannner16 from "@/assets/about-us/banner/photo 12.jpeg";
+import bannner17 from "@/assets/about-us/banner/photo 13.jpeg";
+import bannner18 from "@/assets/about-us/banner/photo 14.jpeg";
+import bannner19 from "@/assets/about-us/banner/photo 15.jpeg";
+import bannner20 from "@/assets/about-us/banner/photo 16.jpeg";
+import bannner21 from "@/assets/about-us/banner/photo 17.jpeg";
+import bannner22 from "@/assets/about-us/banner/photo 18.jpeg";
+import bannner23 from "@/assets/about-us/banner/photo 19.jpeg";
+import bannner24 from "@/assets/about-us/banner/photo 20.jpeg";
+import bannner25 from "@/assets/about-us/banner/photo 21.jpeg";
+import bannner26 from "@/assets/about-us/banner/photo 22.jpeg";
+
+
+
 
 // Removed: import { motion } from "framer-motion";
 
 function Banner() {
-  const images = [bannner1, bannner2, bannner3, bannner4, bannner5];
+  const images = [bannner1, bannner2, bannner3, bannner4, bannner5, bannner6, bannner7, bannner8, bannner9, bannner10, bannner11, bannner12, bannner13, bannner14, bannner15, bannner16, bannner17, bannner18, bannner19, bannner20, bannner21, bannner22, bannner23, bannner24, bannner25, bannner26];
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
