@@ -51,7 +51,7 @@ export function RecruitmentCard() {
       </div>
 
       {/* Overlay Image (Unchanged) */}
-      <div className="absolute bottom-1 md:-right-5 lg:bottom-0 lg:-top-32 right-0 w-[400px] lg:w-[675px] pointer-events-none z-10">
+      <div className="absolute bottom-1 md:-right-5 lg:bottom-0 lg:-top-32 right-0  w-[400px] lg:w-[675px] pointer-events-none z-10">
         <Image
           src={overImg}
           alt="Overlay image"
