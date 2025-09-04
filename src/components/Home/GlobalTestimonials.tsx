@@ -184,13 +184,13 @@ const FeaturedTestimonials = () => {
                     <Image
                       src={phlinesText}
                       alt="Philippines"
-                      width={180}
+                      width={140}
                       height={40}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "180px",
+                        width: "160px",
                       }}
                     />
                   </div>
@@ -223,8 +223,8 @@ const FeaturedTestimonials = () => {
                     <Image
                       src={netherlandsText}
                       alt="Netherlands"
-                      width={180}
-                      height={80}
+                      width={160}
+                      height={40}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
@@ -294,7 +294,7 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 3 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-12 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
@@ -333,7 +333,7 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 4 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-12 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
@@ -411,20 +411,20 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 6 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-12 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
                     <Image
                       src={lituniaText}
                       alt="Lithuania"
-                      width={120}
+                      width={140}
                       height={40}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "120px",
+                        width: "140px",
                       }}
                     />
                   </div>
@@ -489,20 +489,20 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 8 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-14 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
                     <Image
                       src={sloviaText}
                       alt="Slovakia"
-                      width={110}
-                      height={40}
+                      width={140}
+                      height={60}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "110px",
+                        width: "140px",
                       }}
                     />
                   </div>
@@ -528,20 +528,20 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 9 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-14 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
                     <Image
                       src={hungariaText}
                       alt="Hungary"
-                      width={120}
+                      width={140}
                       height={40}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "120px",
+                        width: "140px",
                       }}
                     />
                   </div>
@@ -567,20 +567,20 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 10 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-12 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
                     <Image
                       src={bulgariaText}
                       alt="Bulgaria"
-                      width={125}
+                      width={130}
                       height={40}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "125px",
+                        width: "130px",
                       }}
                     />
                   </div>
@@ -606,20 +606,20 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 11 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-14 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
                     <Image
                       src={bangladeshText}
                       alt="Bangladesh"
-                      width={135}
-                      height={40}
+                      width={300}
+                      height={180}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "135px",
+                        width: "160px",
                       }}
                     />
                   </div>
@@ -645,7 +645,7 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 12 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-12 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
@@ -684,7 +684,7 @@ const FeaturedTestimonials = () => {
               />
               {activeIndex === 13 && (
                 <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
+                  className="absolute left-1/2 -top-12 z-50 pointer-events-none"
                   style={{ transform: "translateX(-50%)" }}
                 >
                   <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
