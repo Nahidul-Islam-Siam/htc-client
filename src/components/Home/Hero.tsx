@@ -53,6 +53,8 @@ export default function Hero() {
                 src={hero1}
                 alt="Skilled technician with helmet and tools"
                 className="object-contain"
+                width={500}
+                height={500}
                 style={{ maxHeight: "550px", width: "auto" }}
                 priority
               />
@@ -61,6 +63,8 @@ export default function Hero() {
               <Image
                 src={hero2}
                 alt="Smiling engineer wearing blue safety helmet"
+                width={500}
+                height={500}
                 className="object-contain"
                 style={{ maxHeight: "550px", width: "auto" }}
                 priority

@@ -135,13 +135,13 @@ export default function Faq() {
                   +
                 </span>
               </summary>
-              <div className="px-8 pb-6 pt-0 ml-12 text-gray-600 leading-relaxed">
-                {typeof item.answer === "string" ? (
-                  item.answer
-                ) : (
-                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
-                )}
-              </div>
+       <div className="px-8 pb-6 pt-0 ml-12 text-gray-600 leading-relaxed">
+  {typeof item.answer === "string" ? (
+    <p>{item.answer}</p>
+  ) : (
+    item.answer
+  )}
+</div>
             </details>
           ))}
         </div>
