@@ -102,15 +102,16 @@ const TestimonialCard = ({
         />
         <div className="flex items-center gap-2">
           <div className="gap-2">
-            <p className="text-sm font-bold uppercase gap-2">
-              {name} {/* Render Flag */}
-              <CountryFlag
-                countryCode={countryCode}
-                svg
-                style={{ width: "20px", height: "15px", borderRadius: "2px" }}
-                aria-label={country}
-              />
-            </p>
+<div className="flex text-sm font-bold justify-center items-center uppercase gap-2">
+  {name}
+  <CountryFlag
+    countryCode={countryCode}
+    svg
+    style={{ width: "20px", height: "15px", borderRadius: "2px" }}
+    aria-label={country}
+  />
+</div>
+
             <p className="text-xs text-gray-500">{role}</p>
           </div>
         </div>
