@@ -8,11 +8,11 @@ import hero2 from "@/assets/home/Right - Yellow Helmet.png";
 
 export default function Hero() {
   return (
-    <div className="bg-[#ffffff]">
+    <div className="bg-[#ffffff] ">
       <section className="relative mx-auto    md:mb-24 mb-16">
         <div className="relative overflow-hidden rounded-2xl border bg-[#ffffff] md:py-16 py-12 shadow-sm">
           {/* Content */}
-          <div className="relative z-10 flex flex-col justify-center text-center max-w-7xl mx-auto">
+          <div className="relative z-10 flex flex-col justify-center text-center md:py-16 max-w-7xl mx-auto">
             {/* Badge */}
             <div className="flex h-6  px-3 py-1 justify-center gap-2 bg-[rgba(250,187,0,0.15)] backdrop-blur-[10px] mx-auto items-center rounded-md text-[11px] uppercase tracking-wider text-[#DE9400] leading-none font-normal">
               Your recruitment partner
@@ -49,24 +49,26 @@ export default function Hero() {
           {/* Images */}
           <div className="absolute bottom-0 left-0 w-full flex h-auto">
             <div className="w-1/2 hidden sm:flex">
-              <Image
-                src={hero1}
-                alt="Skilled technician with helmet and tools"
-                className="object-contain"
-                width={500}
-                height={500}
-                style={{ maxHeight: "550px", width: "auto" }}
-                priority
-              />
+   <Image
+  src={hero1}
+  alt="Skilled technician with helmet and tools"
+  width={400}          // 👈 explicitly set dimensions
+  height={400}
+  quality={100}        // 👈 force best quality
+  className="object-contain"
+  priority
+  sizes="(max-width: 608px) 100vw, 50vw" // 👈 tells Next.js how big to render at breakpoints
+/>
+
             </div>
             <div className="w-1/2 hidden sm:flex justify-end">
-              <Image
+               <Image
                 src={hero2}
                 alt="Smiling engineer wearing blue safety helmet"
-                width={500}
-                height={500}
-                className="object-contain"
-                style={{ maxHeight: "550px", width: "auto" }}
+                width={400}  // ← Replace with actual image width
+                height={400} // ← Replace with actual image height
+                className="object-contain "
+                sizes="(min-width: 608px) 50vw, 100vw"
                 priority
               />
             </div>
