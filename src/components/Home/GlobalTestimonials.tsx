@@ -64,7 +64,7 @@ const testimonials: Testimonial[] = [
     name: "ALXANDRU",
     role: "E&I Technician",
     country: "Moldova",
-    countryCode: "MD",
+    countryCode: "RO",
     avatar: "/images/a3.png",
     quote:
       "I had a very good experience with this company. They were very supportive and helped me find a job that suited my skills.",
@@ -74,7 +74,7 @@ const testimonials: Testimonial[] = [
     name: "ALEXANDER",
     role: "Pipefitter",
     country: "Russia",
-    countryCode: "RU",
+    countryCode: "BG",
     avatar: "/images/a4.png",
     quote:
       "HTC Techniek is an excellent company. I have worked with HTC for nearly a year and have not experienced any issues. The staff are friendly and professional.",
