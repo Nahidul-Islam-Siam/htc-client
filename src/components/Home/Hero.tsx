@@ -9,7 +9,7 @@ import hero2 from "@/assets/home/Right - Yellow Helmet.png";
 export default function Hero() {
   return (
     <div className="bg-[#ffffff]">
-      <section className="relative mx-auto    md:mb-20 mb-16">
+      <section className="relative mx-auto    md:mb-24 mb-16">
         <div className="relative overflow-hidden rounded-2xl border bg-[#ffffff] md:py-16 py-12 shadow-sm">
           {/* Content */}
           <div className="relative z-10 flex flex-col justify-center text-center max-w-7xl mx-auto">
@@ -53,7 +53,7 @@ export default function Hero() {
                 src={hero1}
                 alt="Skilled technician with helmet and tools"
                 className="object-contain"
-                style={{ maxHeight: "520px", width: "auto" }}
+                style={{ maxHeight: "550px", width: "auto" }}
                 priority
               />
             </div>
@@ -62,7 +62,7 @@ export default function Hero() {
                 src={hero2}
                 alt="Smiling engineer wearing blue safety helmet"
                 className="object-contain"
-                style={{ maxHeight: "520px", width: "auto" }}
+                style={{ maxHeight: "550px", width: "auto" }}
                 priority
               />
             </div>
