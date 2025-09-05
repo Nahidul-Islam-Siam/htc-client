@@ -13,7 +13,8 @@ type Step = {
   title: string;
   description: string;
   image: string;
-  iconImage: string;
+  iconImage: string;        // Default icon (for inactive)
+  iconImageActive: string;  // Special icon when active
 };
 
 const steps: Step[] = [
@@ -21,25 +22,25 @@ const steps: Step[] = [
     title: "Upload your CV",
     description:
       "Apply for a vacancy or submit an open application. We'll review your profile within minutes.",
-    image:
-      "/step1.png",
-    iconImage: "/images/upload2.png",
+    image: "/step1.png",
+    iconImage: "/images/upload2-active.png",
+    iconImageActive: "/images/upload2.png", // ← Your active version
   },
   {
     title: "Pre-screening within 5 minutes",
     description:
       "Our AI and team quickly assess your fit for available roles and match you accordingly.",
-    image:
-      "/step2.jpg",
+    image: "/step2.jpg",
     iconImage: "/images/message.png",
+    iconImageActive: "/images/message-active.svg",
   },
   {
     title: "Intake interview with recruiter",
     description:
       "A personal call to understand your goals, skills, and preferences for the perfect match.",
-    image:
-  "/step3.jpg",
+    image: "/step3.jpg",
     iconImage: "/images/tv.png",
+    iconImageActive: "/images/tv-active.svg",
   },
   {
     title: "Introduction to employer",
@@ -48,6 +49,7 @@ const steps: Step[] = [
     image:
       "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&w=800",
     iconImage: "/images/people.png",
+    iconImageActive: "/images/people-active.svg",
   },
   {
     title: "Getting Started",
@@ -56,6 +58,7 @@ const steps: Step[] = [
     image:
       "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&w=800",
     iconImage: "/images/bag.png",
+    iconImageActive: "/images/bag-active.svg",
   },
 ];
 
@@ -63,38 +66,34 @@ export default function RecruitmentSteps() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
   const stepsRef = useRef<(HTMLLIElement | null)[]>([]);
-  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
-    if (!section || stepsRef.current.length === 0) return;
+    if (!section) return;
 
-    // Create a timeline for step-by-step control
-    // const tl = gsap.timeline({
-    //   defaults: { duration: 0.8, ease: "power2.out" },
-    // });
-
-    // Animate image and content via ScrollTrigger
-    ScrollTrigger.create({
-      trigger: section,
-      start: "center center",
-      end: `+=${window.innerHeight * 3}`, // Last ~3 screens
-      pin: true, // 👉 This pins the entire section
-      pinSpacing: true,
-      scrub: true,
-      onEnter: () => setActiveIndex(0),
-      onLeave: () => setActiveIndex(steps.length - 1),
-      onLeaveBack: () => setActiveIndex(0),
-      onUpdate: (self) => {
-        const stepIndex = Math.min(
-          steps.length - 1,
-          Math.floor(self.progress * steps.length)
-        );
-        setActiveIndex(stepIndex);
-      },
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: `+=${window.innerHeight * 3}`,
+        pin: true,
+        pinSpacing: true,
+        scrub: true,
+        onEnter: () => setActiveIndex(0),
+        onLeave: () => setActiveIndex(steps.length - 1),
+        onLeaveBack: () => setActiveIndex(0),
+        onUpdate: (self) => {
+          const stepIndex = Math.min(
+            steps.length - 1,
+            Math.floor(self.progress * steps.length)
+          );
+          setActiveIndex(stepIndex);
+        },
+      });
     });
 
     return () => {
+      ctx.revert();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -102,7 +101,7 @@ export default function RecruitmentSteps() {
   return (
     <section ref={sectionRef} className="bg-white relative">
       {/* Sticky/Fixed Section */}
-      <div className="mx-auto max-w-7xl px-6 p">
+      <div className="mx-auto max-w-7xl px-6 py-10">
         {/* Header */}
         <div className="mb-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center sm:text-left">
           <h2 className="md:text-3xl text-2xl font-bold text-gray-900 leading-snug">
@@ -131,32 +130,37 @@ export default function RecruitmentSteps() {
                 return (
                   <li
                     key={idx}
-           ref={(el) => { stepsRef.current[idx] = el as HTMLLIElement | null; }}
-                    className={`px-5 py-5 transition-all ${
-                      isActive ? "bg-gray-50" : "hover:bg-gray-25"
+                    ref={(el) => {
+                      stepsRef.current[idx] = el;
+                    }}
+                    className={`px-5 py-5 transition-all duration-300 ${
+                      isActive ? "bg-gray-50" : "hover:bg-gray-50"
                     }`}
                   >
                     <div className="flex items-start gap-4">
+                      {/* Icon Circle */}
                       <div
-                        className={`flex h-9 w-9 items-center justify-center rounded-md  flex-shrink-0 ${
+                        className={`flex h-9 w-9 items-center justify-center rounded-md  flex-shrink-0 transition-all duration-300 ${
                           isActive
-                            ? "bg-gray-50 border-black"
+                            ? "bg-white  shadow-md"
                             : isCompleted
-                            ? " "
+                            ? ""
                             : "bg-white border-gray-300"
                         }`}
                       >
                         <Image
-                          src={step.iconImage}
-                          alt=""
+                          src={isActive ? step.iconImageActive : step.iconImage}
+                          alt={`${step.title} icon`}
                           width={24}
                           height={24}
                           className="object-contain"
                         />
                       </div>
+
+                      {/* Text */}
                       <div>
                         <p
-                          className={`text-base font-semibold ${
+                          className={`text-base font-semibold transition-colors duration-300 ${
                             isActive ? "text-gray-900" : "text-[#A9A29D]"
                           }`}
                         >
@@ -176,31 +180,20 @@ export default function RecruitmentSteps() {
           </div>
 
           {/* Right: Image */}
-          <div
-            ref={imageRef}
-            className="flex-1 relative rounded-xl overflow-hidden shadow-lg aspect-video lg:aspect-auto"
-          >
+          <div className="flex-1 relative rounded-xl overflow-hidden shadow-lg aspect-video lg:aspect-auto">
             <Image
               src={steps[activeIndex].image}
               alt={steps[activeIndex].title}
               width={800}
               height={600}
-              className="object-cover transition-all duration-500"
+              className="object-cover transition-all duration-700"
             />
-            {/* <div className="absolute inset-0 bg-black/30"></div> */}
-            {/* <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-lg font-semibold">{steps[activeIndex].title}</h3>
-              <p className="text-sm mt-1 text-white/90">
-                {steps[activeIndex].description}
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
 
       {/* Push content down to allow scroll */}
-
-      <div className="h-[10vh]"></div>
+      <div className="h-[300vh]"></div>
     </section>
   );
 }

@@ -128,7 +128,7 @@ const FeaturedTestimonials = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % totalMarkers);
-    }, 2000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -161,43 +161,51 @@ const FeaturedTestimonials = () => {
             />
 
             {/* ——— PHILIPPINES ——— */}
-            <div
-              className="absolute"
+      {/* ——— PHILIPPINES ——— */}
+<div
+      className="absolute z-50" // ✅ ensure this wrapper participates in stacking
+      style={{
+        top: "22%",
+        left: "57%",
+        transform: "translate(-50%, -50%)",
+      }}
+    >
+      {/* Yellow Dot */}
+      <Image
+        src={yellowDot}
+        alt="Philippines"
+        width={10}
+        height={10}
+        className="w-auto h-auto"
+      />
+
+      {/* Tooltip */}
+      {activeIndex === 0 && (
+        <div
+          className="absolute z-[9999] pointer-events-none " // ✅ max priority
+          style={{
+            top: "-40px",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
+            <Image
+              src={phlinesText}
+              alt="Philippines"
+              width={160}
+              height={40}
+              className="drop-shadow-lg"
               style={{
-                top: "22%",
-                left: "57%",
-                transform: "translate(-50%, -50%)",
+                width: "160px",
+                height: "auto",
+                maxWidth: "none",
               }}
-            >
-              <Image
-                src={yellowDot}
-                alt="Philippines"
-                width={10}
-                height={10}
-                className="w-auto h-auto"
-              />
-              {activeIndex === 0 && (
-                <div
-                  className="absolute left-1/2 -top-16 z-50 pointer-events-none"
-                  style={{ transform: "translateX(-50%)" }}
-                >
-                  <div style={{ animation: "fadeInUp 0.4s ease-out forwards" }}>
-                    <Image
-                      src={phlinesText}
-                      alt="Philippines"
-                      width={140}
-                      height={40}
-                      className="drop-shadow-lg"
-                      style={{
-                        maxWidth: "none",
-                        height: "auto",
-                        width: "160px",
-                      }}
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
+            />
+          </div>
+        </div>
+      )}
+    </div>
 
             {/* ——— NETHERLANDS ——— */}
             <div
@@ -380,13 +388,13 @@ const FeaturedTestimonials = () => {
                     <Image
                       src={romaniaText}
                       alt="Romania"
-                      width={130}
-                      height={40}
+                      width={140}
+                      height={50}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "130px",
+                        width: "140px",
                       }}
                     />
                   </div>
@@ -458,13 +466,13 @@ const FeaturedTestimonials = () => {
                     <Image
                       src={polandiaText}
                       alt="Poland"
-                      width={125}
+                      width={130}
                       height={40}
                       className="drop-shadow-lg"
                       style={{
                         maxWidth: "none",
                         height: "auto",
-                        width: "125px",
+                        width: "130px",
                       }}
                     />
                   </div>
