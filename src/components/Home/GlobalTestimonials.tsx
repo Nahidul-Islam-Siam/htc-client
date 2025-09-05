@@ -102,7 +102,7 @@ const TestimonialCard = ({
         />
         <div className="flex items-center gap-2">
           <div className="gap-2">
-<div className="flex text-sm font-bold justify-center items-center uppercase gap-2">
+<div className="flex text-left text-sm font-bold  items-center uppercase gap-2">
   {name}
   <CountryFlag
     countryCode={countryCode}
