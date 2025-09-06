@@ -74,7 +74,7 @@ export default function RecruitmentSteps() {
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: section,
-        start: "top top",
+        start: "center center",
         end: `+=${window.innerHeight * 3}`,
         pin: true,
         pinSpacing: true,
@@ -193,7 +193,7 @@ export default function RecruitmentSteps() {
       </div>
 
       {/* Push content down to allow scroll */}
-      <div className="h-[300vh]"></div>
+      <div className="h-[10vh]"></div>
     </section>
   );
 }
