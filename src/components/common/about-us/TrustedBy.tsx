@@ -6,12 +6,13 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 
-import TrustedByLogo1 from "@/assets/about-us/trustedby/image 18.png";
-import TrustedByLogo2 from "@/assets/about-us/trustedby/image 19.png";
-import TrustedByLogo3 from "@/assets/about-us/trustedby/image 20.png";
-import TrustedByLogo4 from "@/assets/about-us/trustedby/image 21.png";
-import TrustedByLogo5 from "@/assets/about-us/trustedby/image 22.png";
-import TrustedByLogo6 from "@/assets/about-us/trustedby/image 23.png";
+import TrustedByLogo1 from "@/assets/about-us/trustedby/Alll Seas Logo.png";
+import TrustedByLogo2 from "@/assets/about-us/trustedby/Ballast Nedam Logo.png";
+import TrustedByLogo3 from "@/assets/about-us/trustedby/Damen Logo.png";
+import TrustedByLogo4 from "@/assets/about-us/trustedby/Equans logo.png";
+import TrustedByLogo5 from "@/assets/about-us/trustedby/HSM logo.png";
+import TrustedByLogo6 from "@/assets/about-us/trustedby/PCN.png";
+import TrustedByLogo7 from "@/assets/about-us/trustedby/SPIE_(Unternehmen)_logo.png";
 
 const logos = [
   TrustedByLogo1,
@@ -20,6 +21,7 @@ const logos = [
   TrustedByLogo4,
   TrustedByLogo5,
   TrustedByLogo6,
+  TrustedByLogo7,
 ];
 
 export default function TrustedBy() {
