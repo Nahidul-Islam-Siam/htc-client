@@ -71,8 +71,8 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 4,
-    name: "ALEXANDER",
-    role: "Pipefitter",
+    name: "EMANUIL",
+    role: "E&I Technician",
     country: "Russia",
     countryCode: "BG",
     avatar: "/images/a4.png",
